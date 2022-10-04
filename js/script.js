@@ -20,7 +20,6 @@ window.addEventListener('load', function(){
     let enemyInterval = 2500;
     let randomEnemyInterval = Math.random() * enemyInterval; 
     let enemySpeed = 5;
-
     
     let sonicFrameY = 0;
     let sonicframeTimer = -5;
@@ -282,6 +281,7 @@ window.addEventListener('load', function(){
         tempo =  minutesValue + ' : ' + secondsValue;
     }
 
+
     function gameSpeedManager(){
         
         if(!gameOver){
@@ -290,16 +290,14 @@ window.addEventListener('load', function(){
             enemyInterval -= 1;
             randomEnemyInterval = Math.random() * enemyInterval; 
             
-            if( gameSpeed >= 15) gameSpeed = 15;
+            if (gameSpeed >= 15) gameSpeed = 15;
             if (enemySpeed >= 25) enemySpeed = 25;
-            if (enemyInterval <= 800) enemyInterval = 800 ;
-
+            if (enemyInterval <= 800) enemyInterval = 800;   
+            
         }
-        
     }   
 
     const scoreGenerator = () => score++;
-   
 
     function displayStatusText(context) {
 
@@ -362,9 +360,19 @@ window.addEventListener('load', function(){
         if(!gameOver) requestAnimationFrame(animate);
     }
 
-    setInterval(scoreGenerator, 250);
+    setInterval(scoreGenerator, 250);  
     setInterval(timeGenerator, 1000);
     setInterval(gameSpeedManager, 100);
     animate(0);
 
 });
+
+//TODO 
+// aumentar score com o aumento do gamespeed
+// adicionar Rings de pontuação/moeda de jogo
+// adicionar tela de inicio e game over
+// adicionar animação de morte
+// adicionar botoes a tela de inicio (loja e iniciar)
+// apos inicio escolher dificuldade
+// adicionar features na loja
+// adicionar skins a loja
