@@ -14,7 +14,7 @@ body {
 }
 
 body #canvas1 {
-  background: white;
+  background: rgba(128, 128, 128, 0.829);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -23,7 +23,37 @@ body #canvas1 {
   border: 10px solid green;
 }
 
-body img {
+body .hide {
   display: none;
+}
+
+body .btn {
+  font-family: 'Sonic';
+  background: red;
+  color: white;
+  padding: 1.5vh 2.5vw;
+  border: 1px solid white;
+  font-size: 1.2vw;
+  position: absolute;
+}
+
+body .startGame {
+  top: 64vh;
+  left: 45vw;
+}
+
+body .Lojinha {
+  top: 72vh;
+  left: 44.5vw;
+}
+
+body .reiniciar {
+  top: 70vh;
+  left: 35vw;
+}
+
+body .voltaTela {
+  top: 70vh;
+  left: 55vw;
 }
 /*# sourceMappingURL=style.css.map */
